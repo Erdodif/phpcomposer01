@@ -1,15 +1,18 @@
 <?php
 
-namespace Phil\htmlpdf;
+namespace Phil\Htmlpdf;
 
 require "../vendor/autoload.php";
 use Dompdf\Dompdf;
+use Phil\Htmlpdf\Allatkert;
 
 $dompdf = new Dompdf();
-$dompdf->loadHtml("Hello World");
+$allatkert = new Allatkert();
+$ki = $allatkert->getAllatok();
+$dompdf->loadHtml($ki);
 
 $dompdf->setPaper('A4','portrait');
 
 $dompdf->render();
 
-$dompdf->stream("out.pdf");
+$dompdf->stream();
