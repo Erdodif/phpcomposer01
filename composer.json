@@ -1,0 +1,13 @@
+{
+    "name": "phil/htmlpdf",
+    "description": "School project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Phil\\Htmlpdf\\": "src/"
+        }
+    },
+    "require": {
+        "dompdf/dompdf": "^1.0"
+    }
+}
